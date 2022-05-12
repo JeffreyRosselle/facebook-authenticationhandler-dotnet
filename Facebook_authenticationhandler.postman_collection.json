@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "912d922a-3217-4741-bff0-ac5415de6122",
+		"name": "Facebook_authenticationhandler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Facebook_authenticationhandler",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "{{FacebookSecret}}",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "public_profile,email",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://graph.facebook.com/v13.0/oauth/access_token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://www.facebook.com/v13.0/dialog/oauth",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://app.getpostman.com/oauth2/callback",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{FacebookId}}",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Facebook Token",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Facebook",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7030/weatherforecast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7030",
+					"path": [
+						"weatherforecast"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "FacebookId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "FacebookSecret",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
